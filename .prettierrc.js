@@ -1,21 +1,21 @@
 module.exports = {
-	arrowParens: 'avoid',
+	arrowParens: "avoid",
 	bracketSameLine: true,
 	bracketSpacing: true,
-	singleQuote: true,
-	trailingComma: 'all',
+	singleQuote: false,
+	trailingComma: "all",
 	useTabs: true,
 	tabWidth: 4,
-	endOfLine: 'lf',
-	htmlWhitespaceSensitivity: 'css',
+	endOfLine: "lf",
+	htmlWhitespaceSensitivity: "css",
 	printWidth: 100,
-	proseWrap: 'preserve',
+	proseWrap: "preserve",
 	requirePragma: false,
 	semi: true,
 	vueIndentScriptAndStyle: true,
 	overrides: [
 		{
-			files: '*.json',
+			files: "*.json",
 			options: {
 				printWidth: 200,
 			},
