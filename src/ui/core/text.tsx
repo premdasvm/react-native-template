@@ -21,13 +21,14 @@ export const textVariants = {
 	md: "",
 	sm: "text-[14px] leading-[21px]",
 	xs: "text-[12px] leading-[18px]",
-	error: " text-[12px] leading-[30px] text-danger-500",
+	error: "text-[12px] leading-[30px] text-danger-500",
 };
 
 export const Text = ({ variant = "md", className = "", style, children, ...props }: Props) => {
 	return (
 		<SText
 			className={`
+
       ${textVariants.defaults}
       ${textVariants[variant]}
       ${className}
