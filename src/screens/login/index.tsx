@@ -1,12 +1,10 @@
 import { Text, View } from "@/ui/core";
 import React from "react";
 
-const App = () => {
+export const Login = () => {
 	return (
 		<View className="flex-1 items-center justify-center">
-			<Text className="text-slate-800 text-xl">Tailwind implemented successfully 🎉</Text>
+			<Text className="text-slate-800 text-xl">Login</Text>
 		</View>
 	);
 };
-
-export default App;
