@@ -5,6 +5,10 @@ import { StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { RootNavigator } from "@/navigation";
 
+import { hydrateAuth } from "@/core";
+
+hydrateAuth();
+
 const App = () => {
 	return (
 		<GestureHandlerRootView style={styles.container}>
