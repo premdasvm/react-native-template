@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { TokenType, getToken, removeToken, setToken } from "./utils";
 import { createSelectors } from "../utils";
+import { setHeaderToken } from "@/api";
 
 interface AuthState {
 	token: TokenType | null;
@@ -16,10 +17,12 @@ const _useAuth = create<AuthState>((set, get) => ({
 	signIn: token => {
 		setToken(token);
 		set({ status: "signIn", token });
+		setHeaderToken(token.access);
 	},
 	signOut: () => {
 		removeToken();
 		set({ status: "signOut", token: null });
+		setHeaderToken("");
 	},
 	hydrate: () => {
 		try {

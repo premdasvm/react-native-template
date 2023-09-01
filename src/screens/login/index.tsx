@@ -1,24 +1,34 @@
-import { useAuth } from "@/core";
-import { Button, Input, Text, View } from "@/ui/core";
 import React from "react";
 import { LoginForm, LoginFormProps } from "./login-form";
 import { useSoftKeyboardEffect } from "@/core/keyboard";
 import { FocusAwareStatusBar } from "@/ui";
+import { useAuth } from "@/core";
+import { useLogin } from "@/api";
 
 export const Login = () => {
 	const signIn = useAuth.use.signIn();
+
+	const { mutate: logIn, isLoading } = useLogin();
+
 	useSoftKeyboardEffect();
 
 	const onSubmit: LoginFormProps["onSubmit"] = data => {
-		console.log(data);
+		logIn(data, {
+			onSuccess: ({ accessToken, refreshToken }) => {
+				signIn({ access: accessToken, refresh: refreshToken });
+			},
+			onError: error => {
+				console.log(error.response?.data);
 
-		signIn({ access: "access-token", refresh: "refresh-token" });
+				//
+			},
+		});
 	};
 
 	return (
 		<>
 			<FocusAwareStatusBar />
-			<LoginForm onSubmit={onSubmit} />
+			<LoginForm onSubmit={onSubmit} loading={isLoading} />
 		</>
 	);
 };
