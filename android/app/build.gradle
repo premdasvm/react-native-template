@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.premdasvm.fieldsync'
+    namespace 'com.premdasvm.fieldsync.development'
     defaultConfig {
-        applicationId 'com.premdasvm.fieldsync'
+        applicationId 'com.premdasvm.fieldsync.development'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -9,7 +9,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 	slug: "rnapp",
 	version: Env.VERSION.toString(),
 	orientation: "portrait",
-	icon: "./assets.icon.png",
+	icon: "./assets/icon.png",
 	userInterfaceStyle: "automatic",
 	splash: {
 		image: "./assets/splash.png",
@@ -32,6 +32,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 		favicon: "./assets/favicon.png",
 	},
 	plugins: [
+		["@bacons/link-assets", ["./assets/fonts/Inter.ttf"]],
 		[
 			"expo-build-properties",
 			{

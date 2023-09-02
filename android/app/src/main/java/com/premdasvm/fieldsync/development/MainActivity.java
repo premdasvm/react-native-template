@@ -1,4 +1,4 @@
-package com.premdasvm.fieldsync;
+package com.premdasvm.fieldsync.development;
 
 import android.os.Build;
 import android.os.Bundle;

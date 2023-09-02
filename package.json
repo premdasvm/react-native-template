@@ -3,11 +3,15 @@
 	"version": "1.0.0",
 	"scripts": {
 		"start": "EXPO_NO_DOTENV=1 expo start",
+		"prebuild": "EXPO_NO_DOTENV=1 expo prebuild",
 		"android": "EXPO_NO_DOTENV=1 expo run:android",
 		"ios": "EXPO_NO_DOTENV=1 expo run:ios",
+		"prebuild:staging": "APP_ENV=staging npm run prebuild",
+		"prebuild:production": "APP_ENV=production npm run prebuild",
 		"web": "expo start --web"
 	},
 	"dependencies": {
+		"@bacons/link-assets": "^1.1.0",
 		"@hookform/resolvers": "^3.3.1",
 		"@react-navigation/bottom-tabs": "^6.5.8",
 		"@react-navigation/native": "^6.1.7",
@@ -31,7 +35,8 @@
 		"react-native-screens": "~3.22.0",
 		"react-query-kit": "^1.4.8",
 		"zod": "^3.22.2",
-		"zustand": "^4.4.1"
+		"zustand": "^4.4.1",
+		"expo-system-ui": "~2.4.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.0",
