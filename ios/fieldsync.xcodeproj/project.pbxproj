@@ -10,15 +10,16 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		346A1E1C25EC47899212F2F6 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03EA6ADED4EA4A1E9E3CDBE2 /* Inter.ttf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-fieldsync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-fieldsync.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		FBE51E46D63F4616A96FF9D7 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BF2C10AE8548B2B692B5AA /* noop-file.swift */; };
-		346A1E1C25EC47899212F2F6 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03EA6ADED4EA4A1E9E3CDBE2 /* Inter.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03EA6ADED4EA4A1E9E3CDBE2 /* Inter.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter.ttf; path = ../assets/fonts/Inter.ttf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* fieldsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fieldsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = fieldsync/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = fieldsync/AppDelegate.mm; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-fieldsync/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		03EA6ADED4EA4A1E9E3CDBE2 /* Inter.ttf */ = {isa = PBXFileReference; name = "Inter.ttf"; path = "../assets/fonts/Inter.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,15 @@
 				58EEBF8E8E6FB1BC6CAF49B5 /* libPods-fieldsync.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49951AF04B45473A8D026BF5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6ADED4EA4A1E9E3CDBE2 /* Inter.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -138,15 +147,6 @@
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
-		};
-		49951AF04B45473A8D026BF5 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				03EA6ADED4EA4A1E9E3CDBE2 /* Inter.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -372,8 +372,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.premdasvm.fieldsync.development";
-				PRODUCT_NAME = "fieldsync";
+				PRODUCT_BUNDLE_IDENTIFIER = com.premdasvm.fieldsync.development;
+				PRODUCT_NAME = fieldsync;
 				SWIFT_OBJC_BRIDGING_HEADER = "fieldsync/fieldsync-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -400,8 +400,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.premdasvm.fieldsync.development";
-				PRODUCT_NAME = "fieldsync";
+				PRODUCT_BUNDLE_IDENTIFIER = com.premdasvm.fieldsync.development;
+				PRODUCT_NAME = fieldsync;
 				SWIFT_OBJC_BRIDGING_HEADER = "fieldsync/fieldsync-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
