@@ -31,10 +31,10 @@ require("dotenv").config({
  * for example: if the APP_ENV is staging, the bundle id will be com.bg-tracking.staging
  */
 
-const BUNDLE_ID = "com.premdasvm.fieldsync"; // ios bundle id
-const PACKAGE = "com.premdasvm.fieldsync"; // android package name
-const NAME = "field-sync"; // app name
-const EXPO_ACCOUNT_OWNER = "premdasvm"; //expo account owner
+const BUNDLE_ID = "com.expo.template"; // ios bundle id
+const PACKAGE = "com.expo.template"; // android package name
+const NAME = "expo-rn-template"; // app name
+const EXPO_ACCOUNT_OWNER = "expoowner"; //expo account owner
 
 /**
  * We declare a function withEnvSuffix that will add a suffix to the variable name based on the APP_ENV

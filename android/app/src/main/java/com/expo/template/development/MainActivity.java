@@ -1,4 +1,4 @@
-package com.premdasvm.fieldsync.development;
+package com.expo.template.development;
 
 import android.os.Build;
 import android.os.Bundle;

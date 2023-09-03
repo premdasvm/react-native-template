@@ -27,6 +27,7 @@
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.premdasvm.fieldsync"/>
         <data android:scheme="com.premdasvm.fieldsync.development"/>
+        <data android:scheme="com.expo.template.development"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
