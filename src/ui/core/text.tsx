@@ -9,6 +9,7 @@ const SText = styled(NNText);
 interface Props extends TextProps {
 	variant?: keyof typeof textVariants;
 	className?: string;
+	tx?: string;
 }
 
 export const textVariants = {
@@ -21,10 +22,11 @@ export const textVariants = {
 	md: "",
 	sm: "text-[14px] leading-[21px]",
 	xs: "text-[12px] leading-[18px]",
-	error: "text-[12px] leading-[30px] text-danger-500",
+	error: " text-[12px] leading-[30px] text-danger-500",
 };
 
-export const Text = ({ variant = "md", className = "", style, children, ...props }: Props) => {
+export const Text = ({ variant = "md", className = "", style, tx, children, ...props }: Props) => {
+	const content = tx ? tx : children;
 	return (
 		<SText
 			className={`
@@ -35,7 +37,7 @@ export const Text = ({ variant = "md", className = "", style, children, ...props
     `}
 			style={style}
 			{...props}>
-			{children}
+			{content}
 		</SText>
 	);
 };
