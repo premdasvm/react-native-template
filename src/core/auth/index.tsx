@@ -12,7 +12,7 @@ interface AuthState {
 }
 
 const _useAuth = create<AuthState>((set, get) => ({
-	status: "signOut",
+	status: "idle",
 	token: null,
 	signIn: token => {
 		setToken(token);

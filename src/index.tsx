@@ -7,15 +7,20 @@ import { RootNavigator } from "@/navigation";
 
 import { hydrateAuth } from "@/core";
 import { APIProvider } from "@/api";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import * as SplashScreen from "expo-splash-screen";
 
 hydrateAuth();
+SplashScreen.preventAutoHideAsync();
 
 const App = () => {
 	return (
 		<GestureHandlerRootView style={styles.container}>
-			<APIProvider>
-				<RootNavigator />
-			</APIProvider>
+			<BottomSheetModalProvider>
+				<APIProvider>
+					<RootNavigator />
+				</APIProvider>
+			</BottomSheetModalProvider>
 		</GestureHandlerRootView>
 	);
 };

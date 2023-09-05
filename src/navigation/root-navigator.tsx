@@ -1,13 +1,23 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as SplashScreen from "expo-splash-screen";
 import { AuthNavigator } from "./auth-navigator";
 import { NavigationContainer } from "./navigation-container";
 import { TabNavigator } from "./tab-navigator";
 import { useAuth } from "@/core";
+import React, { useEffect } from "react";
 
 const Stack = createNativeStackNavigator();
 
 export const Root = () => {
 	const status = useAuth.use.status();
+	const hideSplash = React.useCallback(async () => {
+		await SplashScreen.hideAsync();
+	}, []);
+	useEffect(() => {
+		if (status !== "idle") {
+			hideSplash();
+		}
+	}, [hideSplash, status]);
 
 	return (
 		<Stack.Navigator
