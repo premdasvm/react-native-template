@@ -25,6 +25,7 @@ module.exports = function (api) {
 				},
 			],
 			["nativewind/babel", { mode: "compileOnly" }],
+			"react-native-reanimated/plugin",
 		],
 	};
 };
