@@ -5,12 +5,13 @@ import { StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { RootNavigator } from "@/navigation";
 
-import { hydrateAuth } from "@/core";
+import { hydrateAuth, loadSelectedTheme } from "@/core";
 import { APIProvider } from "@/api";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import * as SplashScreen from "expo-splash-screen";
 
 hydrateAuth();
+loadSelectedTheme();
 SplashScreen.preventAutoHideAsync();
 
 const App = () => {
