@@ -17,14 +17,14 @@ type BVariant = {
 
 export const buttonVariants: BVariant = {
 	defaults: {
-		container: "flex-row items-center justify-center rounded-full px-12 py-3 my-2",
+		container: "flex-row items-center justify-center rounded-2xl px-12 py-3 my-2",
 		label: "text-[16px] font-medium text-white",
 		indicator: "text-white h-[30px]",
 	},
 	primary: {
-		container: "bg-black",
+		container: "bg-primary-600",
 		label: "",
-		indicator: "text-white",
+		indicator: "text-black",
 	},
 	secondary: {
 		container: "bg-primary-600",
@@ -54,10 +54,9 @@ export const Button = ({
 	return (
 		<TouchableOpacity
 			disabled={disabled || loading}
-			className={`
-    ${buttonVariants.defaults.container}
-     ${buttonVariants[variant].container}
-     ${disabled ? "opacity-50" : ""}
+			className={` ${buttonVariants.defaults.container} ${
+				buttonVariants[variant].container
+			} ${disabled ? "opacity-50" : ""}
     `}
 			{...props}>
 			{loading ? (
